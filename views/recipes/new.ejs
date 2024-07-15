@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a Recipe</title>
+</head>
+<body>
+  <h1>Add a New Recipe</h1>
+  <form action="/recipes" method="POST">
+    <label for="description">Description:</label>
+    <textarea type="text" name="description" id="description" required></textarea>
+
+    <label for="preparationTime">Preparation Time:</label>
+    <input type="number" name="preparationTime" id="preparationTime" min="0" required/>
+
+    <label for="cookingTime">Cooking Time:</label>
+    <input type="number" name="cookingTime" id="cookingTime" min="0" required/>
+
+    <label for="servings">Servings:</label>
+    <input type="number" name="servings" id="servings" min="0" required/>
+
+    <button type="submit">Add Recipe</button>
+
+    <% if (typeof errorMessage !== 'undefined') { %>
+      <p class="error"><%= errorMessage %></p>
+    <% } %>
+  </form>
+</body>
+</html>
