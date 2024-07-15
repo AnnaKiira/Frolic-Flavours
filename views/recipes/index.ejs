@@ -12,7 +12,7 @@
         <% recipes.forEach((recipe)=> { %>
             <li>
                 <a href="/recipes/<%=recipe._id%>">
-                    A recipe owned by <%= recipe.owner.username %>.
+                    <%= recipe.nameOfRecipe %> owned by <%= recipe.owner.username %>.
                 </a>
             </li>
             <% }) %>

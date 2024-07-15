@@ -13,6 +13,8 @@
     <p>Cooking Time: <%= recipe.cookingTime %></p>
     <p>Servings: <%= recipe.servings %></p>
 
+    <% if (listing.owner._id.equals(user._id)) %>
+
     <a href="/recipes">Back to Recipes</a>
 
 </body>
