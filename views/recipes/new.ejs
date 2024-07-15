@@ -8,6 +8,9 @@
 <body>
   <h1>Add a New Recipe</h1>
   <form action="/recipes" method="POST">
+    <label for="nameOfRecipe">Name of Recipe:</label>
+    <textarea type="text" name="nameOfRecipe" id="nameOfRecipe" required></textarea>
+
     <label for="description">Description:</label>
     <textarea type="text" name="description" id="description" required></textarea>
 

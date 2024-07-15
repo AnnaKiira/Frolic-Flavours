@@ -31,10 +31,31 @@ router.post('/', async (req, res) => {
         res.redirect('/recipes')
     } catch (error) {
         console.log(error)
-        res.render('recipes/new', {errorMessage: error.message})
+        res.render('recipes/new', { errorMessage: error.message })
     }
 })
 
-//recipes/
+//recipes/show
+router.get('/:recipeId', async (req, res) => {
+    try {
+        const recipeId = req.params.recipeId
+        const foundRecipe = await Recipe.findById(recipeId)
+        
+        if (!foundRecipe) {
+            const error = new Error('Recipe Not Found')
+            error.status = 404
+            throw error
+        }
+        res.render('recipes/show', {
+            foundRecipe
+        })
+    } catch (error) {
+        console.log(error)
+        if (error.status === 404) {
+            return res.render('404.ejs')
+        }
+        res.redirect('/')
+    }
+})
 
 module.exports = router
