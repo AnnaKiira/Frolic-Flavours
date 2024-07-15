@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+</head>
+<body>
+    <h1>Here's All Recipes on Frolic Flavours</h1>
+
+    <ul>
+        <% recipes.forEach((recipe)=> { %>
+            <li>
+                <a href="/recipes/<%=recipe._id%>">
+                    A recipe owned by <%= recipe.owner.username %>.
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+
+    <a href="/recipes/new">Add a New Recipe</a>
+</body>
+</html>
