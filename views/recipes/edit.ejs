@@ -6,7 +6,7 @@
   <title>Edit <%= recipe.nameOfRecipe %></title>
 </head>
 <body>
-
+    <%- include('../partials/_navbar.ejs') %>
   <h1>Edit <%= recipe.nameOfRecipe %></h1>
   <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
     <label for="nameOfRecipe">Name of Recipe:</label>
@@ -30,5 +30,6 @@
       <p class="error"><%= errorMessage %></p>
     <% } %>
   </form>
+  <a href="/recipes">Back to Recipes</a>
 </body>
 </html>
