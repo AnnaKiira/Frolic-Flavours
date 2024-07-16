@@ -39,16 +39,18 @@ router.post('/', async (req, res) => {
 //recipes/show
 router.get('/:recipeId', async (req, res) => {
     try {
-        const recipeId = req.params.recipeId
-        const recipe = await Recipe.findById(recipeId).populate('owner')
-
+        const recipe = await Recipe.findById(req.params.recipeId).populate('owner')
         if (!recipe) {
             const error = new Error('Recipe Not Found')
             error.status = 404
             throw error
         }
+        const userFavRecipe = recipe.favoritedByUsers.some(objectId => {
+            return objectId.equals(req.session.user._id)
+        })
         res.render('recipes/show.ejs', {
-            recipe
+            recipe,
+            userFavRecipe
         })
     } catch (error) {
         console.log(error)
@@ -81,7 +83,7 @@ router.put('/:recipeId', async (req, res) => {
     try {
         const recipeId = await Recipe.findById(req.params.recipeId)
         if (!recipeId) throw new Error()
-        
+
         if (recipeId.owner.equals(req.session.user._id)) {
             await Recipe.findByIdAndUpdate(recipeId, req.body)
             res.redirect(`/recipes/${recipeId}`)
@@ -106,5 +108,31 @@ router.delete('/:recipeId', async (req, res) => {
         res.redirect('/')
     }
 })
+
+//recipes/favorite
+router.post('/:recipeId/favorited-by/:userId', async (req, res) => {
+    try {
+        const favRecipe = await Recipe.findByIdAndUpdate(req.params.recipeId, {
+            $push: { favoritedByUsers: req.session.user._id }
+        })
+        res.redirect(`/recipes/${recipeId}`)
+    } catch (error) {
+        res.redirect('/recipes')
+    }
+})
+
+//recipes/unfavorite
+router.delete('/:recipeId/favorited-by/:userId', async (req, res) => {
+    try {
+        const unFavRecipe = await Recipe.findByIdAndUpdate(req.params.recipeId, {
+            $pull: { favoritedByUsers: req.session.user._id }
+        })
+        res.redirect(`/recipes/${recipeId}`)
+    } catch (error) {
+        res.redirect('/')
+    }
+})
+
+
 
 module.exports = router
