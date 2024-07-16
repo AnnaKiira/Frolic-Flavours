@@ -112,7 +112,8 @@ router.delete('/:recipeId', async (req, res) => {
 //recipes/favorite
 router.post('/:recipeId/favorited-by/:userId', async (req, res) => {
     try {
-        const favRecipe = await Recipe.findByIdAndUpdate(req.params.recipeId, {
+        const recipeId = req.params.recipeId
+        const favRecipe = await Recipe.findByIdAndUpdate(recipeId, {
             $push: { favoritedByUsers: req.session.user._id }
         })
         res.redirect(`/recipes/${recipeId}`)
@@ -124,7 +125,8 @@ router.post('/:recipeId/favorited-by/:userId', async (req, res) => {
 //recipes/unfavorite
 router.delete('/:recipeId/favorited-by/:userId', async (req, res) => {
     try {
-        const unFavRecipe = await Recipe.findByIdAndUpdate(req.params.recipeId, {
+        const recipeId = req.params.recipeId
+        await Recipe.findByIdAndUpdate(recipeId, {
             $pull: { favoritedByUsers: req.session.user._id }
         })
         res.redirect(`/recipes/${recipeId}`)
