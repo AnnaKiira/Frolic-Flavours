@@ -10,10 +10,10 @@
   <h1>Edit <%= recipe.nameOfRecipe %></h1>
   <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
     <label for="nameOfRecipe">Name of Recipe:</label>
-    <textarea type="text" name="nameOfRecipe" id="nameOfRecipe" value="<%= recipe.nameOfRecipe %>"></textarea>
+    <input type="text" name="nameOfRecipe" id="nameOfRecipe" value="<%= recipe.nameOfRecipe %>"/>
 
     <label for="description">Description:</label>
-    <textarea type="text" name="description" id="description" value="<%= recipe.description %>"></textarea>
+    <input type="text" name="description" id="description" value="<%= recipe.description %>"/>
 
     <label for="preparationTime">Preparation Time:</label>
     <input type="number" name="preparationTime" id="preparationTime" min="0" value="<%= recipe.preparationTime %>"/>

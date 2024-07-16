@@ -62,12 +62,11 @@ router.get('/:recipeId', async (req, res) => {
 //recipes/edit
 router.get('/:recipeId/edit', async (req, res) => {
     try {
-        const recipeId = req.params.recipeId
-        const recipe = await Recipe.findById(recipeId)
-        if (!recipeId) throw new Error('Recipe not found')
+        const recipe = await Recipe.findById(req.params.recipeId)
+        if (!recipe) throw new Error('Recipe not found')
 
-        if (recipeId.owner.equals(req.session.user._id)) {
-            res.render('recipes/edit', { recipe: recipe })
+        if (recipe.owner.equals(req.session.user._id)) {
+            res.render('recipes/edit.ejs', { recipe })
         } else {
             res.redirect(`/recipes/${recipe._id}`)
         }
