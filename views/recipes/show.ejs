@@ -14,6 +14,9 @@
     <p>Servings: <%= recipe.servings %></p>
 
     <% if (recipe.owner._id.equals(user._id)) { %>
+        <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
+            <button type="submit">Delete <%= recipe.name %></button>
+        </form>
         <a href="/recipes/<%= recipe._id %>/edit">Edit <%= recipe.nameOfRecipe %></a>
         <% } %>
     <a href="/recipes">Back to Recipes</a>

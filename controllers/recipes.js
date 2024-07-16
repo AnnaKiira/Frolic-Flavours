@@ -92,4 +92,19 @@ router.put('/:recipeId', async (req, res) => {
     }
 })
 
+//recipes/delete
+router.delete('/:recipeId', async (req, res) => {
+    try {
+        const deleteRecipe = await Recipe.findById(req.params.recipeId)
+        if (deleteRecipe.owner.equals(req.session.user._id)) {
+            await deleteRecipe.deleteOne()
+            res.redirect('/recipes')
+        } else {
+            res.send('Only the owner have permission to delete this recipe')
+        }
+    } catch (error) {
+        res.redirect('/')
+    }
+})
+
 module.exports = router
