@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Profile Page</h1>
+    <a href="/recipes">See all Recipes on Frolic Flavours</a>
+    <h2>My Recipes</h2>
+    <% ownedRecipes.forEach(recipe => { %>
+        <div class="single-recipe">
+            <a href="/recipes/<%= recipe._id %>">
+                View More Details
+            </a>
+        </div>
+    <% }) %>
+
+    <h2>My Favorites</h2>
+    <% favoritedRecipes.forEach(recipe => { %>
+        <div class="single-recipe">
+            <a href="/recipes/<%= recipe._id %>">
+                View More Details
+            </a>
+        </div>
+    <% }) %>
+</body>
+</html>

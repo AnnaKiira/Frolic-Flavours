@@ -14,6 +14,7 @@ const isSignedIn = require('./middleware/is-signed-in.js')
 //Local Imports
 const authController = require('./controllers/auth.js');
 const recipesController = require('./controllers/recipes.js');
+const usersController = require('./controllers/users.js');
 
 //Middleware
 app.set('view engine', 'ejs')
@@ -43,6 +44,8 @@ app.get('/', (req, res) => {
 app.use('/auth', authController);
   
 app.use('/recipes', isSignedIn, recipesController);
+
+app.use('/users', isSignedIn, usersController);
 
 app.get('*', (req, res) => {
     res.render('404')
