@@ -28,7 +28,7 @@ body {
 .title-container > h1 {
     margin: 0;
     font-size: 60px;
-    color: #3b0017;
+    color: #542344;
 }
 
 .auth-links,
@@ -46,14 +46,14 @@ body {
   
 .auth-links > a:first-child {
     background-color: #92B9BD;
-    color: #3b0017;
+    color: #542344;
     font-weight: bold;
 }
   
   
 .auth-links > a:nth-child(2) {
     background-color: #92B9BD;
-    color: #3b0017;
+    color: #542344;
     font-weight: bold;
 }
 
@@ -61,7 +61,7 @@ body {
     text-decoration: none;
     margin: 0 6px;
     font-weight: bold;
-    color: #3b0017;
+    color: #542344;
 }
 
 /* LANDING PAGE */
@@ -76,14 +76,14 @@ body {
 .welcome-container > h1 {
     margin: 0;
     font-size: 2em;
-    color: #3b0017;
+    color: #542344;
 }
 
 
 .redirect-links {
     margin: 0 6px;
     font-weight: bold;
-    color: #3b0017;
+    color: #542344;
 }
 
 /* SIGN UP & SIGN IN PAGE */
@@ -110,14 +110,14 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1.5em;
-  color: #3b0017;
+  color: #542344;
 }
 
 .signup-form-container-2 > form,
 .signin-form-container-2 > form {
   display: flex;
   flex-direction: column;
-  color: #3b0017;
+  color: #542344;
 }
 
 input {
@@ -130,7 +130,7 @@ input {
 button {
   border: none;
   border-radius: 8px;
-  color: #3b0017;
+  color: #542344;
   background-color: #92B9BD;
   font-weight: bold;
   font-size: 16px;
@@ -146,27 +146,56 @@ button {
     align-items: center;
     padding: 50px;
     margin: 0 auto;
-  }
+}
   
-  .index-header > h1 {
+.index-header > h1 {
     text-transform: uppercase;
     font-size: 32px;
-    color: #009E60;
-  }
+    color: #542344;
+}
   
-  .index-header > a {
+.index-header > a {
     padding: 6px 12px;
     border: 1px solid #024DA1;
     color: #024DA1;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 18px;
-  }
+    font-size: 20px;
+    margin: 20px;
+}
   
-  .index-header > a:hover {
+.index-header > a:hover {
     background-color: #024DA1;
     border: 1px solid #024DA1;
     color: #fcfbe4;
-  }
+}
 
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    justify-content: center;
+    font-size: 18px;
+}
   
+.recipe-container > a {
+    padding: 12px 25px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 5px 30px 50px;
+    color: #024DA1;
+    background-color: #fcfbe4;
+    box-shadow: 1px 1px 6px 0 #F58F29;
+    transition: all .50s ease;
+}
+  
+.recipe-container > a:hover {
+    background-color: #024DA1;
+    box-shadow: 1px 1px 6px 0 #542344;
+    color: #fcfbe4;
+}
+  
+a > h2 {
+    font-size: 18px;
+}
