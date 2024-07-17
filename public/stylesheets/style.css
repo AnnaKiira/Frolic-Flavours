@@ -9,7 +9,8 @@ body {
     background-color: #fcfbe4;
 }
 
-.landing-header {
+/* NAVIGATION BAR */
+.nav-header {
     display: flex;
     flex-direction: row;
     height: 15%;
@@ -33,6 +34,57 @@ body {
 .nav-links {
     margin: 25px;
 }
+
+.auth-links > a {
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+  
+.auth-links > a:first-child {
+    background-color: #92B9BD;
+    color: #3b0017;
+    font-weight: bold;
+}
+  
+  
+.auth-links > a:nth-child(2) {
+    background-color: #92B9BD;
+    color: #3b0017;
+    font-weight: bold;
+}
+
+.nav-links > a {
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: bold;
+    color: #3b0017;
+}
+
+/* LANDING PAGE */
+
+.welcome-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 20px 35px;
+}
+
+.welcome-container > h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #3b0017;
+}
+
+.authorization-links,
+.redirect-links {
+    margin: 0 6px;
+    font-weight: bold;
+    color: #3b0017;
+}
+
 
 
   

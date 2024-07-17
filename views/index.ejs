@@ -8,17 +8,27 @@
 </head>
 <body>
     <% if (user) { %>
-        <h1>Welcome to Frolic Flavours, <%= user.username %>!</h1>
-        <p>
-            <a href="/auth/sign-out">Sign Out</a>
-            <a href="/recipes/">Go To Recipes</a>
-            <a href="/users/profile">Go To Profile</a>
-        </p>
+        <div class="welcome-container">
+            <h1>Welcome to Frolic Flavours, <%= user.username %>!</h1>
+        </div>
+        <div class="redirect-links">
+            <p>
+                <a href="/auth/sign-out">Sign Out</a>
+                <a href="/recipes/">Go To Recipes</a>
+                <a href="/users/profile">Go To Profile</a>
+            </p>
+        </div>
+
     <% } else { %>
-        <h1>Welcome to Frolic Flavours.</h1>
-        <p>
-            <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign in</a>.
-        </p>
-        <% } %>
+        <div class="welcome-container">
+            <h1>Welcome to Frolic Flavours</h1>
+        </div>
+        <div class="authorization-links">
+            <p>
+                <a href="/auth/sign-up">Sign up</a> or
+                <a href="/auth/sign-in">Sign in</a>
+            </p>
+        </div>
+    <% } %>
 </body>
 </html>
