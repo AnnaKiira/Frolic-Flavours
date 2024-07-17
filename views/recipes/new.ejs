@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-  <title>Add a Recipe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add a Recipe</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-  <h1>Add a New Recipe</h1>
-  <form action="/recipes" method="POST">
-    <label for="nameOfRecipe">Name of Recipe:</label>
-    <textarea type="text" name="nameOfRecipe" id="nameOfRecipe" required></textarea>
+        <div class="newRecipe-container">
+            <div class="newRecipe-form-container">
+                <h1>Add a New Recipe</h1>
+                <form action="/recipes" method="POST">
+                    <label for="nameOfRecipe">Name of Recipe:</label>
+                    <input type="text" name="nameOfRecipe" id="nameOfRecipe" required />
 
-    <label for="instructions">Cooking Instructions:</label>
-    <textarea type="text" name="instructions" id="instructions" required></textarea>
+                    <label for="instructions">Cooking Instructions:</label>
+                    <textarea type="text" name="instructions" id="instructions" required></textarea>
 
-    <label for="preparationTime">Preparation Time:</label>
-    <input type="text" name="preparationTime" id="preparationTime" required/>
+                    <label for="preparationTime">Preparation Time:</label>
+                    <input type="text" name="preparationTime" id="preparationTime" required />
 
-    <label for="cookingTime">Cooking Time:</label>
-    <input type="text" name="cookingTime" id="cookingTime" required/>
+                    <label for="cookingTime">Cooking Time:</label>
+                    <input type="text" name="cookingTime" id="cookingTime" required />
 
-    <label for="servings">Servings:</label>
-    <input type="number" name="servings" id="servings" min="0" required/>
+                    <label for="servings">Servings:</label>
+                    <input type="number" name="servings" id="servings" min="0" required />
 
-    <button type="submit">Add Recipe</button>
+                    <button type="submit">Add Recipe</button>
 
-    <% if (typeof errorMessage !== 'undefined') { %>
-      <p class="error"><%= errorMessage %></p>
-    <% } %>
-  </form>
+                    <% if (typeof errorMessage !=='undefined' ) { %>
+                        <p class="error">
+                            <%= errorMessage %>
+                        </p>
+                        <% } %>
+                </form>
+            </div>
+        </div>
 </body>
 </html>

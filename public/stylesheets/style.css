@@ -27,7 +27,7 @@ body {
 
 .title-container > h1 {
     margin: 0;
-    font-size: 60px;
+    font-size: 32px;
     color: #542344;
 }
 
@@ -45,15 +45,15 @@ body {
 }
   
 .auth-links > a:first-child {
-    background-color: #92B9BD;
-    color: #542344;
+    background-color: #542344;
+    color: #fcfbe4;
     font-weight: bold;
 }
   
   
 .auth-links > a:nth-child(2) {
-    background-color: #92B9BD;
-    color: #542344;
+    background-color: #542344;
+    color: #fcfbe4;
     font-weight: bold;
 }
 
@@ -109,8 +109,10 @@ body {
 .signin-form-container-2 > h1 {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 24px;
   color: #542344;
+  width: 400px;
+  text-align: center;
 }
 
 .signup-form-container-2 > form,
@@ -130,8 +132,8 @@ input {
 button {
   border: none;
   border-radius: 8px;
-  color: #542344;
-  background-color: #92B9BD;
+  color: #fcfbe4;
+  background-color: #542344;
   font-weight: bold;
   font-size: 16px;
   padding: 10px 15px;
@@ -162,6 +164,7 @@ button {
     text-transform: uppercase;
     font-size: 20px;
     margin: 20px;
+    border-radius: 10px;
 }
   
 .index-header > a:hover {
@@ -184,18 +187,79 @@ button {
     flex-direction: column;
     text-decoration: none;
     margin: 5px 30px 50px;
-    color: #024DA1;
-    background-color: #fcfbe4;
+    color: #fcfbe4;
+    background-color: #024DA1;
     box-shadow: 1px 1px 6px 0 #F58F29;
     transition: all .50s ease;
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 200px;
 }
   
 .recipe-container > a:hover {
-    background-color: #024DA1;
-    box-shadow: 1px 1px 6px 0 #542344;
-    color: #fcfbe4;
+    background-color: #fcfbe4;
+    box-shadow: 2px 2px 12px 0 #024DA1;
+    color: #024DA1;
 }
   
 a > h2 {
     font-size: 18px;
+}
+
+/* CREATE RECIPE, NEW PAGE */
+
+.newRecipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+  
+.newRecipe-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    background-color: #542344;
+    max-width: 440px;
+    border-radius: 10px;
+}
+  
+.newRecipe-form-container > h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 32px;
+    color: #ffba00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+}
+  
+.newRecipe-form-container > form {
+    display: flex;
+    flex-direction: column;
+    color: #fcfbe4;
+}
+  
+.newRecipe-form-container > form > input {
+    background-color: #fcfbe4;
+    border: none;
+}
+
+.newRecipe-form-container > form > textarea {
+    background-color: #fcfbe4;
+    border-radius: 10px;
+    margin: 12px 0;
+    max-width: 400px;
+    max-height: 100px;
+    min-height: 32px;
+    min-width: 400px;
+}
+  
+.newRecipe-form-container > form > button {
+    margin-bottom: 20px;
+    background-color: #ffba00;
+    color: #542344;
+    text-transform: uppercase;
+    margin-top: 32px;
 }
