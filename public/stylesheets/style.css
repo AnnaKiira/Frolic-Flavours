@@ -138,6 +138,35 @@ button {
   margin: 10px 0;
 }
 
-
+/* INDEX PAGE SHOWING ALL RECIPES */
+.index-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
+  }
+  
+  .index-header > h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #009E60;
+  }
+  
+  .index-header > a {
+    padding: 6px 12px;
+    border: 1px solid #024DA1;
+    color: #024DA1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .index-header > a:hover {
+    background-color: #024DA1;
+    border: 1px solid #024DA1;
+    color: #fcfbe4;
+  }
 
   

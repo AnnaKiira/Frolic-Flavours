@@ -8,18 +8,20 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Here's All Recipes on Frolic Flavours</h1>
-
-    <ul>
-        <% recipes.forEach((recipe)=> { %>
-            <li>
-                <a href="/recipes/<%=recipe._id%>">
-                    <%= recipe.nameOfRecipe %> owned by <%= recipe.owner.username %>.
-                </a>
-            </li>
-            <% }) %>
-    </ul>
-
-    <a href="/recipes/new">Add a New Recipe</a>
+    <div class="index-header">
+        <h1>All Recipes On Frolic Flavours</h1>
+        <a href="/recipes/new">Add a New Recipe</a>
+    </div>
+    <div class="recipe-container">
+        <ul>
+            <% recipes.forEach((recipe)=> { %>
+                <li>
+                    <a href="/recipes/<%=recipe._id%>">
+                        <%= recipe.nameOfRecipe %> owned by <%= recipe.owner.username %>.
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
 </body>
 </html>
