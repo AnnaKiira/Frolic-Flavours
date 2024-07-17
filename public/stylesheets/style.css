@@ -27,7 +27,8 @@ body {
 
 .title-container > h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 60px;
+    color: #3b0017;
 }
 
 .auth-links,
@@ -83,6 +84,58 @@ body {
     margin: 0 6px;
     font-weight: bold;
     color: #3b0017;
+}
+
+/* SIGN UP & SIGN IN PAGE */
+
+.signup-page,
+.signin-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+.signup-form-container-1,
+.signin-form-container-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.signup-form-container-2 > h1,
+.signin-form-container-2 > h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #3b0017;
+}
+
+.signup-form-container-2 > form,
+.signin-form-container-2 > form {
+  display: flex;
+  flex-direction: column;
+  color: #3b0017;
+}
+
+input {
+  border: 1px solid #F9B5AC;
+  border-radius: 10px;
+  margin: 12px 0;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  color: #3b0017;
+  background-color: #92B9BD;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin: 10px 0;
 }
 
 

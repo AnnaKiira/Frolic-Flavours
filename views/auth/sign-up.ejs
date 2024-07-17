@@ -8,16 +8,22 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>Create a new account!</h1>
-        <form action="/auth/sign-up" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required />
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required />
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" required />
-            <button type="submit">Sign up</button>
-        </form>
-        <p>Already have an account? <a href="/auth/sign-in">Sign in</a></p>
+        <div class="signup-page">
+            <div class="signup-form-container-1">
+                <div class="signup-form-container-2">
+                    <h1>Join Frolic Flavours</h1>
+                    <form action="/auth/sign-up" method="POST">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" required />
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" required />
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" required />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p>Already have an account? <a href="/auth/sign-in">Sign In</a></p>
 </body>
 </html>
