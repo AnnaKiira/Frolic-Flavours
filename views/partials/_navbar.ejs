@@ -1,10 +1,26 @@
 <nav>
     <% if (user) { %>
-    <%=user.username%>
-    <a href="/users/profile">Profile</a>
-    <a href="/auth/sign-out">Sign Out</a>
-    <% } else { %>
-    <a href="/auth/sign-up">Sign Up</a>
-    <a href="/auth/sign-in">Sign In</a>
-    <% } %>
-  </nav>
+        <%=user.username%>
+            <div class="landing-header">
+                <div class="title-container">
+                    <h1>Frolic Flavours</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="/users/profile">Profile</a>
+                    <a href="/recipes">See all Recipes</a>
+                    <a href="/auth/sign-out">Sign Out</a>
+                </div>
+            </div>
+            
+            <% } else { %>
+                <div class="landingPage-header">
+                    <div class="title-container">
+                        <h1>Frolic Flavours</h1>
+                    </div>
+                    <div class="auth-links">
+                        <a href="/auth/sign-up">Sign Up</a>
+                        <a href="/auth/sign-in">Sign In</a>
+                    </div>
+                </div>
+                <% } %>
+</nav>

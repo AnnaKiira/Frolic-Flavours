@@ -16,13 +16,15 @@ const authController = require('./controllers/auth.js');
 const recipesController = require('./controllers/recipes.js');
 const usersController = require('./controllers/users.js');
 
+const path = require('path')
+
 //Middleware
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
-app.use(
-  session({
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
