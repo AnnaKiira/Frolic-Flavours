@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-  <title>Edit <%= recipe.nameOfRecipe %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit <%= recipe.nameOfRecipe %>
+    </title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-  <h1>Edit <%= recipe.nameOfRecipe %></h1>
-  <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
-    <label for="nameOfRecipe">Name of Recipe:</label>
-    <input type="text" name="nameOfRecipe" id="nameOfRecipe" value="<%= recipe.nameOfRecipe %>"/>
+        <div class="editRecipe-container">
+            <div class="editRecipe-form-container">
+                <h1>Edit <%= recipe.nameOfRecipe %></h1>
+                <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
+                    <label for="nameOfRecipe">Name of Recipe:</label>
+                    <input type="text" name="nameOfRecipe" id="nameOfRecipe" value="<%= recipe.nameOfRecipe %>" />
 
-    <label for="description">Description:</label>
-    <input type="text" name="description" id="description" value="<%= recipe.description %>"/>
+                    <label for="instructions">Cooking Instructions:</label>
+                    <textarea type="text" name="instructions" id="instructions"
+                        value="<%= recipe.instructions %>"></textarea>
 
-    <label for="preparationTime">Preparation Time:</label>
-    <input type="number" name="preparationTime" id="preparationTime" min="0" value="<%= recipe.preparationTime %>"/>
+                    <label for="preparationTime">Preparation Time:</label>
+                    <input type="number" name="preparationTime" id="preparationTime" min="0"
+                        value="<%= recipe.preparationTime %>" />
 
-    <label for="cookingTime">Cooking Time:</label>
-    <input type="number" name="cookingTime" id="cookingTime" min="0" value="<%= recipe.cookingTime %>"/>
+                    <label for="cookingTime">Cooking Time:</label>
+                    <input type="number" name="cookingTime" id="cookingTime" min="0"
+                        value="<%= recipe.cookingTime %>" />
 
-    <label for="servings">Servings:</label>
-    <input type="number" name="servings" id="servings" min="0" value="<%= recipe.servings %>"/>
+                    <label for="servings">Servings:</label>
+                    <input type="number" name="servings" id="servings" min="0" value="<%= recipe.servings %>" />
 
-    <button type="submit">Update Recipe</button>
+                    <button type="submit">Update Recipe</button>
 
-    <% if (typeof errorMessage !== 'undefined') { %>
-      <p class="error"><%= errorMessage %></p>
-    <% } %>
-  </form>
-  <a href="/recipes">Back to Recipes</a>
+                    <% if (typeof errorMessage !=='undefined' ) { %>
+                        <p class="error">
+                            <%= errorMessage %>
+                        </p>
+                        <% } %>
+                </form>
+                <a href="/recipes" class="backButton">Back to Recipes</a>
+            </div>
+        </div>
 </body>
 </html>

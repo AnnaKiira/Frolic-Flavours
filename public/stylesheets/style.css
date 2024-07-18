@@ -381,3 +381,89 @@ a>h2 {
     background-color: #542344;
     color: #fcfbe4;
 }
+
+/* EDIT PAGE */
+
+.editRecipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.editRecipe-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    background-color: #542344;
+    max-width: 440px;
+    border-radius: 10px;
+}
+
+.editRecipe-form-container>h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 32px;
+    color: #ffba00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.editRecipe-form-container>form {
+    display: flex;
+    flex-direction: column;
+    color: #fcfbe4;
+}
+
+.editRecipe-form-container>form>input {
+    background-color: #fcfbe4;
+    border: none;
+}
+
+.editRecipe-form-container>form>textarea {
+    background-color: #fcfbe4;
+    border-radius: 10px;
+    margin: 12px 0;
+    max-width: 400px;
+    max-height: 100px;
+    min-height: 32px;
+    min-width: 400px;
+}
+
+.editRecipe-form-container>form>button {
+    margin-bottom: 20px;
+    background-color: #ffba00;
+    color: #542344;
+    text-transform: uppercase;
+    margin-top: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editRecipe-form-container>form>button:hover {
+    background-color: #008539;
+    color: #fcfbe4;
+}
+
+.backButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #542344;
+    background-color: #ffba00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 32px 0px;
+}
+
+.backButton:hover {
+    background-color: #008539;
+    color: #fcfbe4;
+}
