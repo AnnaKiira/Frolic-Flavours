@@ -37,24 +37,13 @@ body {
 }
 
 .auth-links>a {
-    color: white;
+    background-color: #542344;
+    color: #fcfbe4;
+    font-weight: bold;
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
     margin: 0 10px;
-}
-
-.auth-links>a:first-child {
-    background-color: #542344;
-    color: #fcfbe4;
-    font-weight: bold;
-}
-
-
-.auth-links>a:nth-child(2) {
-    background-color: #542344;
-    color: #fcfbe4;
-    font-weight: bold;
 }
 
 .nav-links>a {
@@ -75,7 +64,7 @@ body {
 
 .welcome-container>h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 32px;
     color: #542344;
 }
 
@@ -262,6 +251,13 @@ a>h2 {
     color: #542344;
     text-transform: uppercase;
     margin-top: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newRecipe-form-container>form>button:hover {
+    background-color: #008539;
+    color: #fcfbe4;
 }
 
 /* SHOW DETAILS PAGE */
@@ -286,7 +282,6 @@ a>h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .header-container>h1 {
@@ -296,7 +291,6 @@ a>h2 {
     color: #fcfbe4;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 32px;
 }
 
 .showFavs-container {
@@ -304,7 +298,6 @@ a>h2 {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    margin-left: 20px;
 }
 
 .showFavs-form-container {
@@ -313,7 +306,7 @@ a>h2 {
 }
 
 .showFavs-form-container>p {
-    margin: 21.44px 0px 0px;
+    margin: -6px 0px;
     color: #fcfbe4;
 }
 
@@ -334,7 +327,7 @@ a>h2 {
     font-size: 18px;
     color: #fcfbe4;
     font-weight: bold;
-    margin-bottom: 32px;
+    margin: 10px
 }
 
 .showDetails-form-container>form {
@@ -344,13 +337,13 @@ a>h2 {
 
 /* This is delete button */
 .showDetails-form-container>form>button {
-    margin-bottom: 20px;
+    margin: 12px;
     background-color: #fcfbe4;
     color: #542344;
     text-transform: uppercase;
-    margin-top: 32px;
     cursor: pointer;
-    font: 16px sans-serif; 
+    font: 16px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -374,7 +367,7 @@ a>h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 32px 0px 20px;
+    margin: 12px;
 }
 
 .button:hover {
@@ -467,3 +460,99 @@ a>h2 {
     background-color: #008539;
     color: #fcfbe4;
 }
+
+/* PROFILE PAGE */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: red;
+    padding: 50px 50px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.content-container {
+    display: flex;
+    gap: 40px;
+}
+
+.myRecipes-container,
+.myFavs-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 600px; /* EDIT LATER */
+    border-radius: 10px;
+    align-items: center;
+}
+
+.recipeCards>a {
+    text-decoration: none;
+    margin: 20px 20px;
+    padding: 0px 20px;
+    width: 200px;
+    color: #fcfbe4;
+    background-color: #024DA1;
+    box-shadow: 1px 1px 6px 0 #F58F29;
+    transition: all .50s ease;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.recipeCards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+}
+
+.myRecipes-container {
+    background-color: #F58F29;
+}
+
+.myFavs-container {
+    background-color:#024DA1
+}
+
+.myRecipes-container>h1,
+.myFavs-container>h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #542344;
+}
+
+.myRecipes-container>h2,
+.myFavs-container>h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #542344;
+}
+
+/* .myRecipes-container>a,
+.myFavs-container>a {
+    padding: 12px 25px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 5px 30px 50px;
+    color: #fcfbe4;
+    background-color: #024DA1;
+    box-shadow: 1px 1px 6px 0 #F58F29;
+    transition: all .50s ease;
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 200px;
+} */
+
+.myRecipes-container>a:hover,
+.myFavs-container>a:hover {
+    background-color: #fcfbe4;
+    box-shadow: 2px 2px 12px 0 #024DA1;
+    color: #024DA1;
+}
+
+/* a>h2 {
+    font-size: 18px;
+} */

@@ -1,12 +1,11 @@
 <nav>
     <% if (user) { %>
-        <%=user.username%>
             <div class="nav-header">
                 <div class="title-container">
                     <h1>Frolic Flavours</h1>
                 </div>
                 <div class="nav-links">
-                    <a href="/users/profile">Profile</a>
+                    <a href="/users/profile"><%=user.username%></a>
                     <a href="/recipes">See all Recipes</a>
                     <a href="/auth/sign-out">Sign Out</a>
                 </div>

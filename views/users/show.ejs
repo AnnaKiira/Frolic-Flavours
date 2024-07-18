@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>My Profile</title>
 </head>
+
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Profile Page</h1>
-    <a href="/recipes">See all Recipes on Frolic Flavours</a>
-    <h2>My Recipes</h2>
-    <% ownedRecipes.forEach(recipe => { %>
-        <div class="single-recipe">
-            <a href="/recipes/<%= recipe._id %>">
-                View More Details
-            </a>
-        </div>
-    <% }) %>
+        <div class="profile-container">
+                <h1>
+                    <%=user.username%> Profile Page
+                </h1>
+            <div class="content-container">
+            <div class="myFavs-container">
+            
+                <h2>My Favorites</h2>
+            
+            <div class="recipeCards">
+                <% favoritedRecipes.forEach(recipe=> { %>
 
-    <h2>My Favorites</h2>
-    <% favoritedRecipes.forEach(recipe => { %>
-        <div class="single-recipe">
-            <a href="/recipes/<%= recipe._id %>">
-                View More Details
-            </a>
+                    <a href="/recipes/<%= recipe._id %>">
+                        <h3>
+                            <%= recipe.nameOfRecipe %>
+                        </h3>
+                    </a>
+
+                    <% }) %>
+            </div>
+            </div>
+
+            <div class="myRecipes-container">
+            
+                <h2>My Recipes</h2>
+            
+            <div class="recipeCards">
+                <% ownedRecipes.forEach(recipe=> { %>
+                    <a href="/recipes/<%= recipe._id %>">
+                        <h3>
+                            <%= recipe.nameOfRecipe %>
+                        </h3>
+                    </a>
+                    <% }) %>
+            </div>
         </div>
-    <% }) %>
+        </div>
+        </div>
+        <a href="/recipes">See all Recipes on Frolic Flavours</a>
 </body>
+
 </html>
