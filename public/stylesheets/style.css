@@ -255,8 +255,8 @@ a>h2 {
 }
 
 .newRecipe-form-container>form>button:hover {
-    background-color: #008539;
-    color: #fcfbe4;
+    background-color: #F58F29;
+    color: #542344;
 }
 
 /* SHOW DETAILS PAGE */
@@ -301,6 +301,7 @@ a>h2 {
 .showFavs-form-container {
     display: flex;
     flex-direction: column;
+    padding-left: 24px;
 }
 
 .showFavs-form-container>p {
@@ -440,17 +441,18 @@ a>h2 {
 
 .editRecipe-form-container>form>button {
     margin-bottom: 20px;
-    background-color: #ffba00;
+    background-color:#ffba00;
     color: #542344;
     text-transform: uppercase;
     margin-top: 32px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: sans-serif; 
 }
 
 .editRecipe-form-container>form>button:hover {
-    background-color: #008539;
-    color: #fcfbe4;
+    background-color:#F58F29;
+    color: #542344;
 }
 
 .backButton {
@@ -467,11 +469,12 @@ a>h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 32px 0px;
+    font-family: sans-serif;
 }
 
 .backButton:hover {
-    background-color: #008539;
-    color: #fcfbe4;
+    background-color: #F58F29;
+    color: #542344;
 }
 
 /* PROFILE PAGE */

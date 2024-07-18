@@ -17,16 +17,13 @@
                     <input type="text" name="nameOfRecipe" id="nameOfRecipe" value="<%= recipe.nameOfRecipe %>" />
 
                     <label for="instructions">Cooking Instructions:</label>
-                    <textarea type="text" name="instructions" id="instructions"
-                        value="<%= recipe.instructions %>"></textarea>
+                    <textarea type="text" name="instructions" id="instructions" value="<%= recipe.instructions %>"></textarea>
 
                     <label for="preparationTime">Preparation Time:</label>
-                    <input type="number" name="preparationTime" id="preparationTime" min="0"
-                        value="<%= recipe.preparationTime %>" />
+                    <input type="text" name="preparationTime" id="preparationTime" min="0" value="<%= recipe.preparationTime %>" />
 
                     <label for="cookingTime">Cooking Time:</label>
-                    <input type="number" name="cookingTime" id="cookingTime" min="0"
-                        value="<%= recipe.cookingTime %>" />
+                    <input type="text" name="cookingTime" id="cookingTime" min="0" value="<%= recipe.cookingTime %>" />
 
                     <label for="servings">Servings:</label>
                     <input type="number" name="servings" id="servings" min="0" value="<%= recipe.servings %>" />
