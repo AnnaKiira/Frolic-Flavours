@@ -25,7 +25,7 @@ body {
     margin: 20px 35px;
 }
 
-.title-container > h1 {
+.title-container>h1 {
     margin: 0;
     font-size: 32px;
     color: #542344;
@@ -36,28 +36,28 @@ body {
     margin: 25px;
 }
 
-.auth-links > a {
+.auth-links>a {
     color: white;
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
     margin: 0 10px;
 }
-  
-.auth-links > a:first-child {
-    background-color: #542344;
-    color: #fcfbe4;
-    font-weight: bold;
-}
-  
-  
-.auth-links > a:nth-child(2) {
+
+.auth-links>a:first-child {
     background-color: #542344;
     color: #fcfbe4;
     font-weight: bold;
 }
 
-.nav-links > a {
+
+.auth-links>a:nth-child(2) {
+    background-color: #542344;
+    color: #fcfbe4;
+    font-weight: bold;
+}
+
+.nav-links>a {
     text-decoration: none;
     margin: 0 6px;
     font-weight: bold;
@@ -73,7 +73,7 @@ body {
     margin: 20px 35px;
 }
 
-.welcome-container > h1 {
+.welcome-container>h1 {
     margin: 0;
     font-size: 2em;
     color: #542344;
@@ -90,54 +90,54 @@ body {
 
 .signup-page,
 .signin-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
 }
 
 .signup-form-container-1,
 .signin-form-container-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.signup-form-container-2 > h1,
-.signin-form-container-2 > h1 {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #542344;
-  width: 400px;
-  text-align: center;
+.signup-form-container-2>h1,
+.signin-form-container-2>h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #542344;
+    width: 400px;
+    text-align: center;
 }
 
-.signup-form-container-2 > form,
-.signin-form-container-2 > form {
-  display: flex;
-  flex-direction: column;
-  color: #542344;
+.signup-form-container-2>form,
+.signin-form-container-2>form {
+    display: flex;
+    flex-direction: column;
+    color: #542344;
 }
 
 input {
-  border: 1px solid #F9B5AC;
-  border-radius: 10px;
-  margin: 12px 0;
-  padding: 10px;
+    border: 1px solid #F9B5AC;
+    border-radius: 10px;
+    margin: 12px 0;
+    padding: 10px;
 }
 
 button {
-  border: none;
-  border-radius: 8px;
-  color: #fcfbe4;
-  background-color: #542344;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px 15px;
-  margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: #fcfbe4;
+    background-color: #542344;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 10px 0;
 }
 
 /* INDEX PAGE SHOWING ALL RECIPES */
@@ -149,14 +149,14 @@ button {
     padding: 50px;
     margin: 0 auto;
 }
-  
-.index-header > h1 {
+
+.index-header>h1 {
     text-transform: uppercase;
     font-size: 32px;
     color: #542344;
 }
-  
-.index-header > a {
+
+.index-header>a {
     padding: 6px 12px;
     border: 1px solid #024DA1;
     color: #024DA1;
@@ -166,8 +166,8 @@ button {
     margin: 20px;
     border-radius: 10px;
 }
-  
-.index-header > a:hover {
+
+.index-header>a:hover {
     background-color: #024DA1;
     border: 1px solid #024DA1;
     color: #fcfbe4;
@@ -180,8 +180,8 @@ button {
     justify-content: center;
     font-size: 18px;
 }
-  
-.recipe-container > a {
+
+.recipe-container>a {
     padding: 12px 25px;
     display: flex;
     flex-direction: column;
@@ -195,14 +195,14 @@ button {
     min-width: 200px;
     max-width: 200px;
 }
-  
-.recipe-container > a:hover {
+
+.recipe-container>a:hover {
     background-color: #fcfbe4;
     box-shadow: 2px 2px 12px 0 #024DA1;
     color: #024DA1;
 }
-  
-a > h2 {
+
+a>h2 {
     font-size: 18px;
 }
 
@@ -215,7 +215,7 @@ a > h2 {
     align-items: center;
     height: 80%;
 }
-  
+
 .newRecipe-form-container {
     display: flex;
     flex-direction: column;
@@ -224,8 +224,8 @@ a > h2 {
     max-width: 440px;
     border-radius: 10px;
 }
-  
-.newRecipe-form-container > h1 {
+
+.newRecipe-form-container>h1 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 32px;
@@ -234,19 +234,19 @@ a > h2 {
     text-align: center;
     margin-bottom: 32px;
 }
-  
-.newRecipe-form-container > form {
+
+.newRecipe-form-container>form {
     display: flex;
     flex-direction: column;
     color: #fcfbe4;
 }
-  
-.newRecipe-form-container > form > input {
+
+.newRecipe-form-container>form>input {
     background-color: #fcfbe4;
     border: none;
 }
 
-.newRecipe-form-container > form > textarea {
+.newRecipe-form-container>form>textarea {
     background-color: #fcfbe4;
     border-radius: 10px;
     margin: 12px 0;
@@ -255,11 +255,121 @@ a > h2 {
     min-height: 32px;
     min-width: 400px;
 }
-  
-.newRecipe-form-container > form > button {
+
+.newRecipe-form-container>form>button {
     margin-bottom: 20px;
     background-color: #ffba00;
     color: #542344;
     text-transform: uppercase;
     margin-top: 32px;
+}
+
+/* SHOW DETAILS PAGE */
+.showPage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.showDetails-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    background-color: #fcfbe4;
+    max-width: 440px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 0 #024DA1;
+}
+
+.showDetails-form-container>h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 32px;
+    color: #542344;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.showDetails-form-container>h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+    color: #542344;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.showDetails-form-container>p {
+    font-weight: normal;
+    font-size: 18px;
+    color: #542344;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.showDetails-form-container>form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This is delete button */
+.showDetails-form-container>form>button {
+    margin-bottom: 20px;
+    background-color: #ffba00;
+    color: #542344;
+    text-transform: uppercase;
+    margin-top: 32px;
+    cursor: pointer;
+    font: 16px sans-serif; 
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.showDetails-form-container>form>button:hover {
+    background-color: #024DA1;
+    color: #fcfbe4;
+}
+
+/* edit and see all recipe buttons */
+.button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #542344;
+    background-color: #ffba00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 32px 0px 20px;
+}
+
+.button:hover {
+    background-color: #024DA1;
+    color: #fcfbe4;
+}
+
+.showFavs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.showFavs-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    background-color: #fcfbe4;
+    max-width: 440px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 0 #024DA1;
 }
