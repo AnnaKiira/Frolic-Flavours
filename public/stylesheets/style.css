@@ -278,11 +278,18 @@ a>h2 {
     flex-direction: column;
     padding: 10px 40px;
     background-color: #008539;
-    max-width: 440px;
+    max-width: 600px;
     border-radius: 10px;
 }
 
-.showDetails-form-container>h1 {
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-container>h1 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 32px;
@@ -292,14 +299,34 @@ a>h2 {
     margin-bottom: 32px;
 }
 
-.showDetails-form-container>h2 {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 24px;
+.showFavs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 20px;
+}
+
+.showFavs-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.showFavs-form-container>p {
+    margin: 21.44px 0px 0px;
     color: #fcfbe4;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 32px;
+}
+
+.showFavs-form-container>form>button {
+    cursor: pointer;
+    background-color: #542344;
+    color: #fcfbe4;
+    transition: background-color 0.3s ease;
+}
+
+.showFavs-form-container>form>button:hover {
+    background-color: #fcfbe4;
+    color: #542344;
 }
 
 .showDetails-form-container>p {
@@ -353,22 +380,4 @@ a>h2 {
 .button:hover {
     background-color: #542344;
     color: #fcfbe4;
-}
-
-.showFavs-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-}
-
-.showFavs-form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 40px;
-    background-color: #fcfbe4;
-    max-width: 440px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px 0 #024DA1;
 }

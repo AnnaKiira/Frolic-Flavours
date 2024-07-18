@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>
-        <%= recipe.nameOfRecipe %>
-    </title>
+    <title><%= recipe.nameOfRecipe %></title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
         <div class="showDetails-container">
             <div class="showDetails-form-container">
-                <h1><%= recipe.nameOfRecipe %></h1>
+                <div class="header-container">
+                    <h1> <%= recipe.nameOfRecipe %> </h1>
+                    <div class="showFavs-container">
+                        <div class="showFavs-form-container">
+                            <p>Favorited by <%= recipe.favoritedByUsers.length %></p>
+                            <% if (userFavRecipe) { %>
+                                <p>You favorited this recipe.</p>
+                                <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>?_method=DELETE"
+                                    method="POST">
+                                    <button type="submit">Unfavorite it</button>
+                                </form>
+                                <% } else { %>
+                                    <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>"
+                                        method="POST">
+                                        <button type="submit">Favorite it!</button>
+                                    </form>
+                                    <% } %>
+                        </div>
+                    </div>
+                </div>
 
-                <h2>Details</h2>
-                <p>Cooking Instructions: <%= recipe.instructions %></p>
+                <p>Servings: <%= recipe.servings %></p>
                 <p>Preparation Time: <%= recipe.preparationTime %></p>
                 <p>Cooking Time: <%= recipe.cookingTime %></p>
-                <p>Servings: <%= recipe.servings %></p>
+                <p>Cooking Instructions: </br> <%= recipe.instructions %></p>
 
                 <% if (recipe.owner._id.equals(user._id)) { %>
                     <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
@@ -27,24 +43,6 @@
                     <a href="/recipes/<%= recipe._id %>/edit" class="button">Edit <%= recipe.nameOfRecipe %></a>
                     <% } %>
                         <a href="/recipes" class="button">See all Recipes</a>
-            </div>
-        </div>
-        <div class="showFavs-container">
-            <div class="showFavs-form-container">
-                <h2>Favorites</h2>
-                <p>Favorited by: <%= recipe.favoritedByUsers.length %>
-                </p>
-
-                <% if (userFavRecipe) { %>
-                    <p>You favorited this recipe.</p>
-                    <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>?_method=DELETE" method="POST">
-                        <button type="submit">Unfavorite it</button>
-                    </form>
-                    <% } else { %>
-                        <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>" method="POST">
-                            <button type="submit">Favorite it!</button>
-                        </form>
-                        <% } %>
             </div>
         </div>
 </body>
