@@ -10,16 +10,15 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <div class="showPage-container">
+        <div class="showDetails-container">
             <div class="showDetails-form-container">
                 <h1><%= recipe.nameOfRecipe %></h1>
 
-                <div class="showDetails-container">
                 <h2>Details</h2>
                 <p>Cooking Instructions: <%= recipe.instructions %></p>
                 <p>Preparation Time: <%= recipe.preparationTime %></p>
                 <p>Cooking Time: <%= recipe.cookingTime %></p>
-                <p>Servings: <%= recipe.servings %></p></div>
+                <p>Servings: <%= recipe.servings %></p>
 
                 <% if (recipe.owner._id.equals(user._id)) { %>
                     <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">

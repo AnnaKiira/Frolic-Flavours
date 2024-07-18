@@ -265,7 +265,7 @@ a>h2 {
 }
 
 /* SHOW DETAILS PAGE */
-.showPage-container {
+.showDetails-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,17 +277,16 @@ a>h2 {
     display: flex;
     flex-direction: column;
     padding: 10px 40px;
-    background-color: #fcfbe4;
+    background-color: #008539;
     max-width: 440px;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px 0 #024DA1;
 }
 
 .showDetails-form-container>h1 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 32px;
-    color: #542344;
+    color: #fcfbe4;
     font-weight: bold;
     text-align: center;
     margin-bottom: 32px;
@@ -297,7 +296,7 @@ a>h2 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 24px;
-    color: #542344;
+    color: #fcfbe4;
     font-weight: bold;
     text-align: left;
     margin-bottom: 32px;
@@ -306,7 +305,7 @@ a>h2 {
 .showDetails-form-container>p {
     font-weight: normal;
     font-size: 18px;
-    color: #542344;
+    color: #fcfbe4;
     font-weight: bold;
     margin-bottom: 32px;
 }
@@ -319,7 +318,7 @@ a>h2 {
 /* This is delete button */
 .showDetails-form-container>form>button {
     margin-bottom: 20px;
-    background-color: #ffba00;
+    background-color: #fcfbe4;
     color: #542344;
     text-transform: uppercase;
     margin-top: 32px;
@@ -330,7 +329,7 @@ a>h2 {
 }
 
 .showDetails-form-container>form>button:hover {
-    background-color: #024DA1;
+    background-color: #542344;
     color: #fcfbe4;
 }
 
@@ -343,7 +342,7 @@ a>h2 {
     text-decoration: none;
     text-transform: uppercase;
     color: #542344;
-    background-color: #ffba00;
+    background-color: #fcfbe4;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -352,7 +351,7 @@ a>h2 {
 }
 
 .button:hover {
-    background-color: #024DA1;
+    background-color: #542344;
     color: #fcfbe4;
 }
 
