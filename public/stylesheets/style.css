@@ -4,8 +4,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
     background-color: #fcfbe4;
 }
 
@@ -16,6 +14,7 @@ body {
     height: 15%;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 32px;
 }
 
 .title-container {
@@ -297,7 +296,6 @@ a>h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .showFavs-form-container {
@@ -308,6 +306,25 @@ a>h2 {
 .showFavs-form-container>p {
     margin: -6px 0px;
     color: #fcfbe4;
+}
+
+.details {
+    padding-bottom: 50px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #fcfbe4;
+    margin: 10px
+}
+
+.details>h2 {
+    padding: 0px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+.details>p {
+    margin-top: -16px;
+    line-height: 32px;
 }
 
 .showFavs-form-container>form>button {
@@ -322,18 +339,14 @@ a>h2 {
     color: #542344;
 }
 
-.showDetails-form-container>p {
-    font-weight: normal;
-    font-size: 18px;
-    color: #fcfbe4;
-    font-weight: bold;
-    margin: 10px
-}
-
 .showDetails-form-container>form {
     display: flex;
     flex-direction: column;
 }
+
+/* .detailButtons {
+
+} */
 
 /* This is delete button */
 .showDetails-form-container>form>button {
@@ -468,7 +481,8 @@ a>h2 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: red;
+    background-color:#024DA1;
+    color:#fcfbe4;
     padding: 50px 50px;
     border-radius: 10px;
     margin: auto;
@@ -484,7 +498,7 @@ a>h2 {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
-    width: 600px; /* EDIT LATER */
+    width: 500px; /* EDIT LATER */
     border-radius: 10px;
     align-items: center;
 }
@@ -509,11 +523,11 @@ a>h2 {
 }
 
 .myRecipes-container {
-    background-color: #F58F29;
+    background-color: #fcfbe4;
 }
 
 .myFavs-container {
-    background-color:#024DA1
+    background-color:#fcfbe4;
 }
 
 .myRecipes-container>h1,
@@ -527,7 +541,7 @@ a>h2 {
 .myFavs-container>h2 {
     text-transform: uppercase;
     font-size: 32px;
-    color: #542344;
+    color:#F58F29;
 }
 
 /* .myRecipes-container>a,
