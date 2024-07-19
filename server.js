@@ -1,4 +1,3 @@
-//Import Modules
 const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
@@ -11,14 +10,14 @@ const MongoStore = require('connect-mongo');
 const passUserToView = require('./middleware/pass-user-to-view.js')
 const isSignedIn = require('./middleware/is-signed-in.js')
 
-//Local Imports
+
 const authController = require('./controllers/auth.js');
 const recipesController = require('./controllers/recipes.js');
 const usersController = require('./controllers/users.js');
 
 const path = require('path')
 
-//Middleware
+
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
@@ -36,7 +35,7 @@ app.use(session({
 
 app.use(passUserToView);
 
-//Landing Page
+
 app.get('/', (req, res) => {
     res.render('index', {
         user: req.session.user,
@@ -54,13 +53,12 @@ app.get('*', (req, res) => {
 });
 
 
-//Server Connections
+
 const connect = async () => {
     try {
-        //MongoDB Connection
         await mongoose.connect(process.env.MONGODB_URI);
         console.log('Database Connection Established')
-        //Express Server Connection
+        
         app.listen(process.env.PORT, () => {
             console.log(`Server up & running on port ${process.env.PORT}`)
         })

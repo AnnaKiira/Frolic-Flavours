@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>My Profile</title>
 </head>
-
 <body>
     <%- include('../partials/_navbar.ejs') %>
         <div class="profile-container">
-                <h1>
-                    <%=user.username%> Profile Page
-                </h1>
+                <h1><%=user.username%> Profile Page</h1>
             <div class="content-container">
             <div class="myFavs-container">
             
@@ -23,9 +19,7 @@
                 <% favoritedRecipes.forEach(recipe=> { %>
 
                     <a href="/recipes/<%= recipe._id %>">
-                        <h3>
-                            <%= recipe.nameOfRecipe %>
-                        </h3>
+                        <h3><%= recipe.nameOfRecipe %></h3>
                     </a>
 
                     <% }) %>
@@ -39,9 +33,7 @@
             <div class="recipeCards">
                 <% ownedRecipes.forEach(recipe=> { %>
                     <a href="/recipes/<%= recipe._id %>">
-                        <h3>
-                            <%= recipe.nameOfRecipe %>
-                        </h3>
+                        <h3><%= recipe.nameOfRecipe %></h3>
                     </a>
                     <% }) %>
             </div>
@@ -49,5 +41,4 @@
         </div>
         </div>
 </body>
-
 </html>

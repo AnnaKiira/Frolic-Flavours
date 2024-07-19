@@ -7,7 +7,7 @@ body {
     background-color: #fcfbe4;
 }
 
-/* NAVIGATION BAR */
+
 .nav-header {
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ body {
     color: #542344;
 }
 
-/* LANDING PAGE */
+
 
 .welcome-container {
     display: flex;
@@ -71,7 +71,7 @@ body {
     color: #542344;
 }
 
-/* SIGN UP & SIGN IN PAGE */
+
 
 .signup-page,
 .signin-page {
@@ -125,7 +125,7 @@ button {
     margin: 10px 0;
 }
 
-/* INDEX PAGE SHOWING ALL RECIPES */
+
 .index-header {
     display: flex;
     flex-direction: column;
@@ -191,7 +191,7 @@ a>h2 {
     font-size: 18px;
 }
 
-/* CREATE RECIPE, NEW PAGE */
+
 
 .newRecipe-container {
     display: flex;
@@ -256,7 +256,7 @@ a>h2 {
     color: #542344;
 }
 
-/* SHOW DETAILS PAGE */
+
 .showDetails-container {
     display: flex;
     flex-direction: column;
@@ -343,11 +343,7 @@ a>h2 {
     flex-direction: column;
 }
 
-/* .detailButtons {
 
-} */
-
-/* This is delete button */
 .showDetails-form-container>form>button {
     margin: 12px;
     background-color: #fcfbe4;
@@ -365,7 +361,7 @@ a>h2 {
     color: #fcfbe4;
 }
 
-/* edit and see all recipe buttons */
+
 .button {
     padding: 10px 15px;
     font-size: 16px;
@@ -387,7 +383,7 @@ a>h2 {
     color: #fcfbe4;
 }
 
-/* EDIT PAGE */
+
 
 .editRecipe-container {
     display: flex;
@@ -475,7 +471,7 @@ a>h2 {
     color: #542344;
 }
 
-/* PROFILE PAGE */
+
 
 .profile-container {
     display: flex;
@@ -499,7 +495,7 @@ a>h2 {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
-    width: 500px; /* EDIT LATER */
+    width: 500px; 
     border-radius: 10px;
     align-items: center;
 }
@@ -545,21 +541,6 @@ a>h2 {
     color:#F58F29;
 }
 
-/* .myRecipes-container>a,
-.myFavs-container>a {
-    padding: 12px 25px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 5px 30px 50px;
-    color: #fcfbe4;
-    background-color: #024DA1;
-    box-shadow: 1px 1px 6px 0 #F58F29;
-    transition: all .50s ease;
-    border-radius: 10px;
-    min-width: 200px;
-    max-width: 200px;
-} */
 
 .myRecipes-container>a:hover,
 .myFavs-container>a:hover {
@@ -567,7 +548,3 @@ a>h2 {
     box-shadow: 2px 2px 12px 0 #024DA1;
     color: #024DA1;
 }
-
-/* a>h2 {
-    font-size: 18px;
-} */

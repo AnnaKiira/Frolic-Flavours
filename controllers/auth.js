@@ -25,9 +25,7 @@ router.post('/sign-up', async (req, res) => {
         const user = await User.create(req.body);
         res.send(`Thanks for signing up ${user.username}!`);
 
-        //return res.redirect('/auth/sign-in') ---> figure out how to redirect to /auth/sign-in once user has received the thank you for signing up message above
     } catch (error) {
-        console.log(error);
         return res.redirect('/');
     }
 });
@@ -53,7 +51,6 @@ router.post("/sign-in", async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error);
         res.redirect('/');
     }
 });

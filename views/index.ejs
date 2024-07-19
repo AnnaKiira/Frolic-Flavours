@@ -7,10 +7,9 @@
     <title>Frolic Flavours Home Page</title>
 </head>
 <body>
-    <!-- <%- include('./partials/_navbar.ejs') %> -->
     <% if (user) { %>
         <div class="welcome-container">
-            <h1>Welcome to Frolic Flavours, <%= user.username %>!</h1>
+            <h1>Welcome To Frolic Flavours, <%= user.username %>!</h1>
         </div>
         <div class="auth-links">
                 <a href="/auth/sign-out">Sign Out</a>
