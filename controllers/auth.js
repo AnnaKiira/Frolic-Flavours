@@ -3,13 +3,12 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 
 const User = require('../models/user.js');
-const authRedirect = require('../middleware/auth-redirect.js')
 
-router.get('/sign-up', authRedirect, (req, res) => {
+router.get('/sign-up', (req, res) => {
     res.render('auth/sign-up');
 });
 
-router.get('/sign-in', authRedirect, (req, res) => {
+router.get('/sign-in', (req, res) => {
     res.render('auth/sign-in');
 });
 
