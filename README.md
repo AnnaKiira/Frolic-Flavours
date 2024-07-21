@@ -1,6 +1,6 @@
 Frolic Flavours - Discover Delicious Recipes Shared by Users. 
 
-Insert Screenshot of App Here:
+![Screenshot 2024-07-21 at 16 59 00](https://github.com/user-attachments/assets/1d6e9053-f603-48a8-ba5d-eed9b5e82510)
 
 Frolic Flavours is an app that allows users to create their own accounts, upload their own recipes, and view recipes shared by other users on the app. 
 The app includes a favourites feature, enabling users to save their preferred recipes and easily access them on their profile page. 
