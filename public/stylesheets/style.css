@@ -49,19 +49,33 @@ body {
     color: #542344;
 }
 
-
+.landingPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    min-width: 320px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
 
 .welcome-container {
     display: flex;
     flex-direction: row;
     width: 50%;
     margin: 20px 35px;
+    justify-content: center;
 }
 
 .welcome-container>h1 {
     margin: 0;
     font-size: 32px;
     color: #542344;
+    white-space: nowrap;
+    background-color:#fcfbe4;
+    border-radius: 10px;
 }
 
 
@@ -72,14 +86,13 @@ body {
 }
 
 
-
 .signup-page,
 .signin-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 100vh;
 }
 
 .signup-form-container-1,

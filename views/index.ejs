@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Frolic Flavours Home Page</title>
 </head>
-<body>
+<body background="https://res.cloudinary.com/dfvytte8d/image/upload/v1721575515/Frame_2_umgzte.jpg">
+
+    <div class="landingPage-container">
     <% if (user) { %>
         <div class="welcome-container">
             <h1>Welcome To Frolic Flavours, <%= user.username %>!</h1>
@@ -26,5 +28,6 @@
                 <a href="/auth/sign-in">Sign In</a>
         </div>
     <% } %>
+</div>
 </body>
 </html>
