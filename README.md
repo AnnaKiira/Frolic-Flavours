@@ -15,9 +15,9 @@ This makes it easy to find your own recipes and revisit your favourites for futu
 
 I chose to build this recipe-sharing app because I love cooking, especially with loved ones. Working on a project related to my interests made the process really enjoyable and fun.
 
-Planning was an important step before starting building the app.
-- Here is a link to the deployed app: https://frolicflavours.netlify.app
-- Here is a link to my planning materials: https://trello.com/b/QFiNx5aE/crud-project 
+Relevant Links:
+- My deployed app: https://frolicflavours.netlify.app
+- My planning materials: https://trello.com/b/QFiNx5aE/crud-project 
 
 The Trello board includes User Stories, a Routing Table, an ER-Diagram, Wireframes and other ToDo's. This organized my approach in developing a functional and visually appealing app.
 
