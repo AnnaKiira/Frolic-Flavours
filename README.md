@@ -22,7 +22,12 @@ Planning was an important step before starting building the app.
 The Trello board includes User Stories, a Routing Table, an ER-Diagram, Wireframes and other ToDo's. This organized my approach in developing a functional and visually appealing app.
 
 Technologies used:
-- JavaScript, CSS, EJS and MongoDB was used to build and complete this project.
+- JavaScript
+- MongoDB
+- Express
+- Node.js
+- CSS
+- EJS
 
 Key Learnings:
 - After this project, I felt way more comfortable building full-stack applications, and I understood how CRUD operations work much better once I had developed my own app.
